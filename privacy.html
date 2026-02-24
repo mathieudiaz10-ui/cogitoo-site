@@ -24,6 +24,29 @@
             margin: 0 auto;
         }
         
+        .language-switcher {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        
+        .language-switcher a {
+            color: #72c6a1;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+        
+        .language-switcher a:hover {
+            background: rgba(114, 198, 161, 0.1);
+        }
+        
+        .language-switcher .active {
+            background: rgba(114, 198, 161, 0.15);
+        }
+        
         .header {
             text-align: center;
             margin-bottom: 40px;
@@ -130,6 +153,10 @@
 </head>
 <body>
     <div class="container">
+        <div class="language-switcher">
+            <a href="privacy.html" class="active">🇫🇷 Français</a> | <a href="privacy-en.html">🇬🇧 English</a>
+        </div>
+        
         <div class="header">
             <div class="logo">🌟</div>
             <h1>Politique de confidentialité</h1>
