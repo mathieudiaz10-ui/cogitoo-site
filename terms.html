@@ -1,3 +1,495 @@
+
+on est ok, j'ai mon app en FR et en ENG (avec localization), mon build est envoyé dans app store connect, j'ai fait mes mocups et videos en FR et Anglais, il me manque la description de l'app en anglais. A quoi je dois penser encore à traduire pour que cela se mette bien sur le store anglais ? Aussi, comment je modifie une fois que mon build est envoyé, là je peux rien modifier dans connect bizarrement. Fais une feuille de route facile à suivre
+18:24
+Checklist de localisation App Store + Guide de modification
+✅ Éléments à traduire pour le Store anglais
+Textes obligatoires
+Nom de l'app (30 caractères max)
+Sous-titre (30 caractères max)
+Description (4000 caractères max)
+Mots-clés (100 caractères max, séparés par des virgules)
+Notes de version (What's New - pour chaque mise à jour)
+Textes marketing optionnels mais recommandés
+Texte promotionnel (170 caractères - modifiable sans nouvelle version)
+URL de support
+URL marketing
+Politique de confidentialité (si votre site n'a qu'une version FR)
+Captures d'écran et médias
+Vous avez déjà fait ça ✓
+Screenshots (jusqu'à 10 par taille d'écran)
+Vidéos de prévisualisation (optionnel)
+🔧 Comment modifier après l'envoi du build
+Le problème que vous rencontrez est normal : une fois qu'un build est "soumis pour review", la version devient verrouillée.
+Solution selon votre situation :
+Si votre app n'est PAS ENCORE en review (statut "En attente de review") :
+Allez dans App Store > Votre app
+Cliquez sur la version en préparation
+En haut à droite : "Retirer cette version de la review"
+Vous pourrez alors modifier les métadonnées
+Re-soumettez quand c'est prêt
+Si votre app EST en review ou approuvée :
+Vous ne pouvez plus modifier cette version
+Vous devez créer une nouvelle version (ex: 1.0.1 au lieu de 1.0)
+Ou attendre la publication, puis créer une mise à jour
+Pour modifier SANS nouvelle version :
+Seul le texte promotionnel est modifiable à tout moment
+Le reste nécessite une nouvelle soumission
+📋 Feuille de route étape par étape
+Étape 1 : Vérifier votre statut actuel
+App Store Connect > Votre App > Onglet "App Store"
+→ Regardez le statut de votre version
+Étape 2 : Ajouter la localisation anglaise
+Dans App Store Connect, allez dans App Store (onglet)
+Scrollez jusqu'à "Informations de l'App Store"
+Cliquez sur le "+" à côté des langues
+Sélectionnez "Anglais (États-Unis)" ou "Anglais (Royaume-Uni)"
+Cliquez "Créer"
+Étape 3 : Remplir tous les champs en anglais
+Pour la localisation EN que vous venez de créer :
+ Nom de l'app
+ Sous-titre
+ Description complète
+ Mots-clés (pensez SEO anglais)
+ Texte promotionnel
+ Uploadez vos screenshots EN
+ Uploadez votre vidéo EN (si applicable)
+ Notes de version (What's New)
+Étape 4 : Autres paramètres universels (même pour toutes les langues)
+Dans Informations générales de l'app :
+ Catégorie principale
+ Catégorie secondaire (optionnel)
+ Classement par âge (rating)
+ Licence utilisateur (EULA) si nécessaire
+ URL de support
+ URL marketing
+Étape 5 : Sauvegarder et soumettre
+Cliquez "Enregistrer" en haut à droite
+Si vous aviez retiré la version de review : "Soumettre pour review"
+Sinon : créez une nouvelle version 1.0.1
+💡 Conseils pratiques
+Mots-clés anglais : Ne traduisez pas littéralement, faites une vraie recherche ASO (App Store Optimization) pour l'anglais
+Store par défaut : Les utilisateurs verront automatiquement la version dans leur langue système (FR → version FR, EN → version EN)
+Fallback : Si un utilisateur a une langue non supportée (ex: espagnol), il verra votre langue "par défaut" (à définir dans les paramètres)
+Texte promotionnel : C'est le seul élément modifiable sans review - utilisez-le pour des annonces temporaires
+Question de clarification : Votre app est à quel statut actuellement dans App Store Connect ? (En préparation / En attente de review / En review / Prêt pour la vente ?)
+pour mon app dans connect j'ai mis deux localisations : france et etats unis (anglais). Est-ce que ca veut dire que quelqu'un sur le store autrichien va voir ma version FR ou ENG ?
+20:43
+Bonne question ! Voici comment ça fonctionne :
+🌍 Logique de l'App Store pour les localisations
+Quelqu'un en Autriche verra la version selon la langue de son appareil, pas selon son pays :
+Appareil en allemand → Verra la version FR (car pas d'allemand disponible, fallback sur la langue par défaut)
+Appareil en anglais → Verra la version EN (États-Unis)
+Appareil en français → Verra la version FR (France)
+🔑 La règle d'or
+L'App Store se base sur :
+La langue système de l'appareil de l'utilisateur (pas sa localisation GPS)
+Si cette langue n'est pas disponible → langue par défaut (primary language)
+⚙️ Votre langue par défaut
+Pour vérifier/modifier votre langue par défaut :
+App Store Connect > Votre app > Informations sur l'app
+Cherchez "Langue principale" ou "Primary Language"
+C'est celle-ci qui sera affichée quand la langue de l'utilisateur n'est pas disponible
+Conseil : Mettez l'anglais en langue principale si vous visez un public international, car c'est la plus universelle comme fallback.
+📊 Exemples concrets
+Pays de l'utilisateur	Langue appareil	Version affichée	Pourquoi
+Autriche 🇦🇹	Allemand	FR ou EN (selon votre défaut)	Allemand non dispo
+Autriche 🇦🇹	Anglais	EN (États-Unis)	Anglais dispo ✓
+Canada 🇨🇦	Français	FR (France)	Français dispo ✓
+Canada 🇨🇦	Anglais	EN (États-Unis)	Anglais dispo ✓
+Espagne 🇪🇸	Espagnol	FR ou EN (selon votre défaut)	Espagnol non dispo
+Belgique 🇧🇪	Français	FR (France)	Français dispo ✓
+Belgique 🇧🇪	Néerlandais	FR ou EN (selon votre défaut)	Néerlandais non dispo
+✅ Ce qui est important
+Les "localisations" que vous avez ajoutées (France, États-Unis) servent uniquement à organiser dans App Store Connect. Ce qui compte vraiment c'est :
+Français → version FR
+Anglais → version EN
+Toutes les autres langues → votre langue par défaut
+Vous n'avez rien d'autre à faire, c'est automatique ! 🎯
+Capture d’écran 2026-02-24 à 20.47.31.png
+j'arrive pas à mettre les captures decran pour la langue anglais ca me dit ca
+20:48
+Je vois le problème ! Vous êtes dans la section Français et Apple vous demande d'utiliser des screenshots avec les caractéristiques françaises.
+🔧 Solution
+Vous devez uploader vos screenshots anglais dans la section anglaise séparée :
+Étapes à suivre :
+Changez de localisation :
+En haut de la page, cherchez le sélecteur de langue
+Actuellement vous êtes sur "Français (France)"
+Cliquez dessus et sélectionnez "Anglais (États-Unis)" ou "English (U.S.)"
+Uploadez vos screenshots EN :
+Une fois dans la section anglaise, vous aurez les mêmes champs pour uploader
+Là vous pourrez mettre vos captures d'écran en anglais
+Apple acceptera les screenshots avec du texte anglais
+Répétez pour chaque taille d'écran :
+iPhone 6.5 pouces (iPhone 14 Pro Max, 15 Plus, etc.)
+iPhone 6.7 pouces (iPhone 14 Pro Max, 15 Pro Max - si demandé)
+iPad Pro si applicable
+💡 Astuce
+Le lien bleu que vous voyez : "Continuer l'utilisation d'illustrations aux caractéristiques suivantes : Écran de 6,5 pouces en Français"
+Ce lien permet de réutiliser les mêmes screenshots FR pour l'anglais (si vous voulez faire un raccourci et utiliser les mêmes visuels). Mais dans votre cas, ne cliquez PAS dessus puisque vous avez fait des captures spécifiques en anglais !
+🎯 Résumé
+Le problème : Vous essayez d'uploader des screenshots EN dans la section FR
+La solution : Passez d'abord à la localisation anglaise, puis uploadez vos screenshots EN là-bas
+Chaque localisation a ses propres slots pour screenshots ! 📱
+ca se dit ca ? Soft & intuitive games
+that helps keeping focus
+21:17
+Presque parfait ! Voici les corrections grammaticales :
+✅ Version correcte
+"Soft & intuitive games that help keep focus"
+ou mieux encore :
+"Soft & intuitive games that help you stay focused"
+📝 Explications des corrections
+"helps" → "help"
+"games" est pluriel, donc le verbe ne prend pas de "s"
+✗ games that helps
+✓ games that help
+"keeping" → "keep" ou "stay"
+Après "help", on utilise l'infinitif sans "to"
+✓ help keep focus
+✓ help you stay focused
+🎯 Alternatives encore meilleures
+Selon le ton que vous voulez :
+Concis et direct :
+"Soft & intuitive games to boost focus"
+"Gentle games that sharpen your focus"
+"Mindful games for better focus"
+Plus engageant :
+"Soft & intuitive games that help you stay focused"
+"Relaxing games designed to improve focus"
+"Calm, intuitive games to enhance concentration"
+Style moderne/marketing :
+"Soft, intuitive games for mindful focus"
+"Gentle gameplay that keeps you focused"
+Laquelle préférez-vous ? Ou je peux adapter selon le ton de votre app ! 🎮
+traduis en anglais : Cogitoo - Jeux éducatifs pour les 3-6 ans !
+Dans un monde aux écrans souvent trop stimulants, Cogitoo offre un espace de calme et de sérénité où votre enfant apprend à son rythme. 
+Offrez à votre enfant un temps de qualité sans culpabiliser !
+Zéro pub, zéro distraction. Une vraie version gratuite qui permet de tester chaque jeux, chaque niveau de difficulté.
+4 activités : Puzzles, Memory, Coloriage, Jardin des nombres (compter jusqu'à 20, additions, soustractions).
+Couleurs douces, sons apaisants, interface adaptée aux petites mains. Chaque jeu propose plusieurs niveaux pour progresser à son rythme.
+Achat unique. Pas d'abonnement.
+21:30
+📱 Traduction anglaise
+Cogitoo - Educational Games for Ages 3-6!
+In a world of overstimulating screens, Cogitoo offers a calm and peaceful space where your child learns at their own pace.
+Give your child quality screen time without the guilt!
+Zero ads, zero distractions. A truly free version that lets you try every game at every difficulty level.
+4 activities: Puzzles, Memory, Coloring, Number Garden (counting to 20, addition, subtraction).
+Soft colors, soothing sounds, interface designed for little hands. Each game offers multiple levels to progress at their own pace.
+One-time purchase. No subscription.
+🎯 Variante plus punchy (style marketing US)
+Cogitoo - Educational Games for Ages 3-6!
+In a world of overstimulating screens, Cogitoo is a calm, peaceful space where your child learns at their own pace.
+Quality screen time you can feel good about!
+No ads. No distractions. A generous free version lets you try every game at every difficulty level.
+4 engaging activities: Puzzles, Memory, Coloring, Number Garden (counting to 20, addition, subtraction).
+Gentle colors, calming sounds, and an interface designed for little hands. Multiple levels in each game let children progress naturally.
+One-time purchase. No subscription required.
+Quelle version préférez-vous ? Ou un mix des deux ? 😊
+adapte les mots clefs en anglais : éducatif,enfant,puzzle,memory,coloriage,calcul,maternelle,montessori,apprendre,3ans,4ans,5ans,jeux
+21:31
+🔑 Mots-clés adaptés pour l'App Store anglais (US)
+Version optimisée ASO :
+educational,kids,puzzle,memory,coloring,math,preschool,montessori,learning,toddler,games,kindergarten,children
+📊 Explications des adaptations
+Français	Anglais	Pourquoi
+éducatif	educational	Traduction directe, très recherché
+enfant	kids	Plus courant que "children" dans les recherches app
+puzzle	puzzle	Identique ✓
+memory	memory	Identique ✓
+coloriage	coloring	"coloring" (US) ou "colouring" (UK)
+calcul	math	Plus simple et recherché que "calculation"
+maternelle	preschool	Équivalent US (3-5 ans)
+montessori	montessori	Identique ✓
+apprendre	learning	Très fort en ASO
+3ans, 4ans, 5ans	toddler	Les chiffres seuls ne marchent pas bien en ASO
+jeux	games	Traduction directe
+-	kindergarten	Ajouté (5-6 ans, très recherché US)
+-	children	Variante de "kids" pour élargir
+💡 Alternatives à considérer selon votre stratégie
+Si vous voulez cibler "early learning" :
+educational,kids,puzzle,memory,coloring,math,preschool,early learning,montessori,toddler,games,ages 3-6
+Si vous voulez mettre l'accent sur le calme :
+educational,kids,puzzle,memory,gentle games,math,preschool,montessori,calm,toddler,no ads,kindergarten
+Si vous voulez le SEO maximal :
+educational games,kids learning,puzzle,memory game,coloring book,math,preschool app,montessori,toddler games,kindergarten
+⚠️ Rappel limite : 100 caractères maximum, virgules comprises !
+Quelle version vous convient le mieux ? 🎯
+tu m'as fait créer ces pages pour l'app, comment je fais pour avoir aussi la version anglais dessus : https://mathieudiaz10-ui.github.io/cogitoo-site/support.html
+21:38
+Pour avoir la version anglaise de vos pages, vous avez plusieurs options :
+🌐 Option 1 : Pages séparées (Recommandé - Plus simple)
+Créez des versions anglaises séparées de chaque page :
+Structure de fichiers :
+cogitoo-site/
+├── index.html (français)
+├── index-en.html (anglais)
+├── support.html (français)
+├── support-en.html (anglais)
+├── privacy.html (français)
+├── privacy-en.html (anglais)
+Liens dans App Store Connect :
+URL support FR : https://mathieudiaz10-ui.github.io/cogitoo-site/support.html
+URL support EN : https://mathieudiaz10-ui.github.io/cogitoo-site/support-en.html
+Avantages :
+Simple à mettre en place
+Pas de JavaScript nécessaire
+Chaque localisation a son URL propre dans App Store Connect
+🔄 Option 2 : Détection automatique de la langue
+Ajoutez un sélecteur de langue sur chaque page :
+HTML à ajouter (en haut de la page) :
+html
+<div style="text-align: right; padding: 10px;">
+  <a href="support.html" style="margin-right: 10px;">🇫🇷 Français</a>
+  <a href="support-en.html">🇬🇧 English</a>
+</div>
+```
+
+---
+
+## 🎯 Option 3 : Une seule page avec switch (Plus complexe)
+
+Une page qui détecte la langue du navigateur et affiche le bon contenu.
+
+**Je ne recommande pas cette option** car :
+- Plus complexe à maintenir
+- App Store Connect préfère des URLs fixes par langue
+- Risque de confusion pour Apple lors de la review
+
+---
+
+## ✅ Ma recommandation : Faire Option 1
+
+### Étapes concrètes :
+
+1. **Dupliquez vos fichiers HTML**
+```
+   support.html → support-en.html
+   privacy.html → privacy-en.html
+Traduisez le contenu de chaque fichier -en.html
+Ajoutez un switch de langue en haut de chaque page :
+html
+   <div class="language-switcher" style="text-align: right; padding: 20px;">
+     <a href="support.html">FR</a> | <a href="support-en.html">EN</a>
+   </div>
+Dans App Store Connect, utilisez :
+Localisation Français → URL : .../support.html
+Localisation Anglais → URL : .../support-en.html
+🚀 Voulez-vous que je vous aide ?
+Je peux :
+Traduire vos pages HTML existantes en anglais
+Créer les fichiers -en.html avec le contenu traduit
+Ajouter le sélecteur de langue sur toutes les pages
+Partagez-moi le contenu de support.html et privacy.html et je vous prépare les versions anglaises ! 📄
+Capture d’écran 2026-02-24 à 21.41.42.png
+comment j'ajoute une page sur github stp
+21:42
+📄 Comment ajouter une page sur GitHub
+Vous avez 2 méthodes : via l'interface web (plus simple) ou via Git en local.
+🌐 Méthode 1 : Via l'interface GitHub (Recommandé)
+Étape 1 : Créer le nouveau fichier
+Allez sur la page principale de votre repo : mathieudiaz10-ui/cogitoo-site
+Cliquez sur "Add file" (en haut à droite)
+Sélectionnez "Create new file"
+Étape 2 : Nommer le fichier
+Dans le champ "Name your file..." en haut, tapez :
+support-en.html
+Étape 3 : Coller le contenu
+Collez le code HTML de votre nouvelle page dans l'éditeur
+Étape 4 : Commit (sauvegarder)
+Scrollez en bas
+Dans "Commit new file" :
+Message : Add English support page
+Cliquez sur "Commit new file" (bouton vert)
+✅ C'est tout !
+La page sera disponible automatiquement à :
+https://mathieudiaz10-ui.github.io/cogitoo-site/support-en.html
+💻 Méthode 2 : Via Git en local (si vous préférez)
+bash
+# 1. Cloner le repo (si pas déjà fait)
+git clone https://github.com/mathieudiaz10-ui/cogitoo-site.git
+cd cogitoo-site
+
+# 2. Créer le nouveau fichier
+touch support-en.html
+
+# 3. Ouvrir avec votre éditeur et ajouter le contenu
+# (VS Code, Sublime, etc.)
+
+# 4. Ajouter, commiter et pousser
+git add support-en.html
+git commit -m "Add English support page"
+git push origin main
+🚀 Voulez-vous que je vous prépare les fichiers ?
+Je peux vous créer directement :
+support-en.html (version anglaise du support)
+privacy-en.html (version anglaise de la privacy policy)
+terms-en.html (version anglaise des terms, si besoin)
+Avec le sélecteur de langue déjà intégré !
+Vous n'aurez qu'à copier-coller le contenu que je vous donne dans GitHub. Ça vous va ? 😊
+refais moi ce support en anglais stp
+21:45
+Je vais créer la version anglaise de votre page support. Laissez-moi d'abord voir le contenu actuel.
+
+Fetching the French support page content
+Fetching the French support page content
+La réponse de Claude a été interrompue.
+refais moi ce support en anglais stp
+https://github.com/mathieudiaz10-ui/cogitoo-site/blob/main/support.html
+21:46
+
+Web recherché
+Web recherché
+Je n'arrive pas à accéder directement au code. Pouvez-vous me copier-coller le contenu du fichier support.html ici ? Ou alors cliquez sur le bouton "Raw" dans GitHub et copiez tout le code HTML.
+Une fois que vous me l'aurez donné, je vous créerai immédiatement la version anglaise complète support-en.html ! 📄
+
+<!DOCTYPE html> <html lang="fr"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Support - Cogitoo</title> <style> * { margin: 0; padding: 0; box-sizing: border-box; }
+PASTED
+21:46
+Parfait ! Voici votre page support en anglais :
+
+Creating English version of support page
+Creating English version of support page
+Maintenant je vais aussi mettre à jour votre page française pour ajouter le sélecteur de langue :
+
+Fichier créé, a exécuté une commande, lu un fichier
+Fichier créé, a exécuté une commande, lu un fichier
+✅ Voilà ! Vos deux pages de support sont prêtes
+J'ai créé :
+support-en.html - Version anglaise complète
+support.html - Version française mise à jour avec le sélecteur de langue
+🎯 Ce qui a été ajouté :
+Sur les deux pages :
+Sélecteur de langue en haut à droite : 🇫🇷 Français | 🇬🇧 English
+Style élégant avec hover effects
+Version anglaise :
+Tous les textes traduits naturellement
+Prix adapté : $1.99 au lieu de 1,99 €
+Liens mis à jour : privacy-en.html et terms-en.html
+📤 Comment uploader sur GitHub :
+Allez sur votre repo : https://github.com/mathieudiaz10-ui/cogitoo-site
+Pour support-en.html (nouveau fichier) :
+Cliquez sur "Add file" → "Create new file"
+Nom : support-en.html
+Copiez-collez le contenu du premier fichier
+Commit : "Add English support page"
+Pour support.html (fichier existant) :
+Cliquez sur le fichier support.html
+Cliquez sur l'icône crayon ✏️ (Edit)
+Remplacez tout par le contenu du deuxième fichier
+Commit : "Add language switcher"
+🔗 URLs finales dans App Store Connect :
+Français : https://mathieudiaz10-ui.github.io/cogitoo-site/support.html
+English : https://mathieudiaz10-ui.github.io/cogitoo-site/support-en.html
+Besoin que je fasse pareil pour privacy.html et terms.html ? 😊
+Support en
+Code · HTML 
+Support
+Code · HTML 
+comment jaffiche le code sgtp
+21:51
+💻 Comment afficher le code des fichiers
+Option 1 : Directement dans le chat (le plus simple)
+Cliquez sur les fichiers que je vous ai donnés ci-dessus, ils vont s'ouvrir et vous pourrez :
+Voir le code directement
+Copier tout avec le bouton en haut à droite
+Télécharger si besoin
+Option 2 : Via votre navigateur
+Les fichiers sont déjà téléchargés ! Regardez en bas de votre navigateur ou dans votre dossier Téléchargements :
+support-en.html
+support.html
+Ensuite :
+Clic droit sur le fichier → Ouvrir avec → Bloc-notes ou TextEdit ou VS Code
+Vous verrez tout le code HTML
+Option 3 : Je vous montre le code ici
+Voulez-vous que je vous affiche :
+Le code de support-en.html (version anglaise) ?
+Le code de support.html (version française mise à jour) ?
+Les deux ?
+Je peux vous le montrer directement dans le chat en texte brut pour que vous puissiez facilement le copier ! 📋
+Dites-moi lequel vous voulez voir et je l'affiche tout de suite 👇
+
+<!DOCTYPE html> <html lang="fr"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Politique de confidentialité - Cogitoo</title> <style> * { margin: 0; padding: 0; box-sizing: borde
+PASTED
+idem avec ce  code stp transforme en anglais :
+21:56
+
+2 fichiers créés, a exécuté une commande, lu un fichier
+2 fichiers créés, a exécuté une commande, lu un fichier
+✅ Voilà ! Vos pages de politique de confidentialité sont prêtes
+J'ai créé :
+privacy-en.html - Version anglaise complète
+privacy.html - Version française mise à jour avec le sélecteur de langue
+📋 Récapitulatif de tous vos fichiers à uploader sur GitHub :
+Fichier	Action	Description
+support-en.html	➕ Créer	Support en anglais
+support.html	✏️ Modifier	Support FR avec sélecteur
+privacy-en.html	➕ Créer	Privacy en anglais
+privacy.html	✏️ Modifier	Privacy FR avec sélecteur
+🔗 URLs finales pour App Store Connect :
+Localisation Française :
+Support : https://mathieudiaz10-ui.github.io/cogitoo-site/support.html
+Privacy : https://mathieudiaz10-ui.github.io/cogitoo-site/privacy.html
+Localisation English (U.S.) :
+Support : https://mathieudiaz10-ui.github.io/cogitoo-site/support-en.html
+Privacy : https://mathieudiaz10-ui.github.io/cogitoo-site/privacy-en.html
+Avez-vous aussi un fichier terms.html (conditions d'utilisation) à traduire ? 🤔
+Privacy en
+Code · HTML 
+Privacy
+Code · HTML 
+
+<!DOCTYPE html> <html lang="fr"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Conditions d'utilisation - Cogitoo</title> <style> * { margin: 0; padding: 0; box-sizing: border-bo
+PASTED
+une dernière page stp à traduire en anglais comme tu as fait pour les deux autres :
+22:00
+
+2 fichiers créés, a exécuté une commande, lu un fichier
+2 fichiers créés, a exécuté une commande, lu un fichier
+✅ Parfait ! Toutes vos pages sont prêtes !
+Voici terms-en.html et terms.html (mis à jour).
+📦 RÉCAPITULATIF COMPLET - Tous vos fichiers
+Vous avez maintenant 6 fichiers à uploader sur GitHub :
+Nouveaux fichiers à créer (➕) :
+support-en.html - Support en anglais
+privacy-en.html - Privacy en anglais
+terms-en.html - Terms en anglais
+Fichiers existants à modifier (✏️) :
+support.html - Support FR avec sélecteur de langue
+privacy.html - Privacy FR avec sélecteur de langue
+terms.html - Terms FR avec sélecteur de langue
+🔗 URLs finales pour App Store Connect
+Localisation Français (France) :
+URL de support : https://mathieudiaz10-ui.github.io/cogitoo-site/support.html
+URL politique de confidentialité : https://mathieudiaz10-ui.github.io/cogitoo-site/privacy.html
+Localisation English (United States) :
+URL de support : https://mathieudiaz10-ui.github.io/cogitoo-site/support-en.html
+URL politique de confidentialité : https://mathieudiaz10-ui.github.io/cogitoo-site/privacy-en.html
+Note : Les Terms (conditions d'utilisation) ne sont pas obligatoires dans App Store Connect, mais vous les avez aussi au cas où !
+🎯 Vous êtes prêt pour le lancement !
+Checklist finale :
+✅ App localisée en FR et EN (dans Xcode)
+✅ Build envoyé dans App Store Connect
+✅ Screenshots et vidéos en FR et EN
+✅ Description anglaise
+✅ Mots-clés adaptés
+✅ Pages support/privacy en FR et EN
+✅ Sélecteur de langue sur toutes les pages
+Il ne vous reste plus qu'à uploader les 6 fichiers sur GitHub et mettre les URLs dans App Store Connect ! 🚀
+Besoin d'aide pour autre chose ? 😊
+Terms en
+Code · HTML 
+Terms
+Code · HTML 
+
+
+
+
+Claude est une IA et peut faire des erreurs. Veuillez vérifier les réponses.
+Terms · HTML
+Copier
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -22,6 +514,29 @@
         .container {
             max-width: 700px;
             margin: 0 auto;
+        }
+        
+        .language-switcher {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        
+        .language-switcher a {
+            color: #72c6a1;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+        
+        .language-switcher a:hover {
+            background: rgba(114, 198, 161, 0.1);
+        }
+        
+        .language-switcher .active {
+            background: rgba(114, 198, 161, 0.15);
         }
         
         .header {
@@ -106,6 +621,10 @@
 </head>
 <body>
     <div class="container">
+        <div class="language-switcher">
+            <a href="terms.html" class="active">🇫🇷 Français</a> | <a href="terms-en.html">🇬🇧 English</a>
+        </div>
+        
         <div class="header">
             <div class="logo">🌟</div>
             <h1>Conditions d'utilisation</h1>
